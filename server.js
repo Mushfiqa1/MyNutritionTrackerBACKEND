@@ -18,6 +18,7 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // ⭐ REQUIRED FOR RENDER
 
 // Routes
 app.use("/api/users", userRoutes);
